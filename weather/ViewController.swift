@@ -65,7 +65,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     //Сообщает делегату, что доступны новые данные о местоположении
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
 
-        //если приложение иммет права на использовании местоположения
+        //если приложение имeет права на использовании местоположения
         //https://developer.apple.com/documentation/corelocation/clauthorizationstatus
         if CLLocationManager.authorizationStatus() == CLAuthorizationStatus.authorizedWhenInUse {
             let location = locations[0]
@@ -121,7 +121,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     func setBlueGradientBackground(){
         let topColor = UIColor(red: 95.0/255.0, green: 165.0/255.0, blue: 1.0, alpha: 1.0).cgColor
         //let topColor = UIColor.blue
-        let buttonColor = UIColor(red: 72.0/255.0, green: 144.0/255.0, blue: 184.0/255.0, alpha: 1.0).cgColor
+        let buttonColor = UIColor(red: 22.0/255.0, green: 144.0/255.0, blue: 184.0/255.0, alpha: 1.0).cgColor
         //let buttonColor = UIColor.yellow
         gradientLayer.frame = view.bounds
         gradientLayer.colors = [topColor, buttonColor]
@@ -129,10 +129,10 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     func setGrayGradientBackground(){
-        //let topColor = UIColor(red: 151.0/255.0, green: 151.0/255.0, blue: 151.0/255.0, alpha: 1.0).cgColor
-        let topColor = UIColor.darkGray
-       // let buttonColor = UIColor(red: 72.0/255.0, green: 72.0/255.0, blue: 72.0/255.0, alpha: 1.0).cgColor
-        let buttonColor = UIColor.lightGray
+        let topColor = UIColor(red: 151.0/255.0, green: 151.0/255.0, blue: 151.0/255.0, alpha: 1.0).cgColor
+        //let topColor = UIColor.darkGray
+        let buttonColor = UIColor(red: 72.0/255.0, green: 72.0/255.0, blue: 72.0/255.0, alpha: 1.0).cgColor
+        //let buttonColor = UIColor.lightGray
         
         gradientLayer.frame = view.bounds
         gradientLayer.colors = [topColor, buttonColor]
